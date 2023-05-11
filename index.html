@@ -27,11 +27,11 @@
                 <div class = "modal-row">
                     <div class = "modal-col">
                         <label for="">How should your mail be addressed?</label>
-                        <input type = "text" placeholder="E.g. The Smith Family" class = "form-control" name = "addr_ing_name">
+                        <input type = "text" placeholder="E.g. The NeilyKa Family" class = "form-control" name = "addr_ing_name">
                     </div>
                 </div>
 
-                <div class = "modal-row grid-row"  id="myUL">
+                <div class = "modal-row grid-row" >
                     <div class = "modal-col"  >
                         <label for="">First Name</label>
                         <input type = "text" placeholder="The first name" class = "form-control" name = "first_name">
@@ -42,7 +42,7 @@
                     </div>
                 </div>
 
-                <div class = "modal-row grid-row">
+                <div class = "modal-row grid-row" >
                     <div class = "modal-col">
                         <label for="">Email</label>
                         <input type = "email" placeholder="The email" class = "form-control" name = "email">
@@ -72,7 +72,7 @@
                     <div class = "modal-col">
                         <label for="">Country</label>
                         <select id = "country-list" name = "country">
-                            <!-- <option>USA</option> -->
+                            
                         </select>
                     </div>
                 </div>
@@ -109,17 +109,17 @@
                         <span><i class = "fas fa-plus"></i> Add address</span>
                     </button>
                 </div>
-                <div class="right-box">
+                <div class="right-box" id="form" >
                     <!-- <i class="fa fa-search"></i> -->
-                    <input type="text" id="empId" placeholder="Enter Employee">
-                    <button class="buttonSearch" style="background-color: #EE534F;">Search</button>
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter Employee">
+                    <button class="buttonSearch" type="submit" id="submit" style="background-color: #EE534F;">Search</button>
                 </div>
             </div>
             <!-- ======================== -->
 
-            <div class = "addr-book-list" id = "addr-book-list">
-                <table class = "addr-table">
-                    <thead>
+            <div class = "addr-book-list" id = "addr-book-list"   >
+                <table class = "addr-table" id="myTable">
+                   
                         <tr>
                             <th>ID</th>
                             <th>Address</th>
@@ -127,88 +127,24 @@
                             <th>By Name</th>
                             <th>Phone</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                   
+                   
                         <!-- <tr>
                             <td>1</td>
                             <td>
-                                <span class = "addressing-name">Smith Family</span><br><span class = "address">Johnson Street - 5668, Lake side</span>
+                                <span class = "addressing-name">Theng Sreynich</span><br><span class = "address">Johnson Street - 5668, Lake side</span>
                             </td>
                             <td><span>Colleagues</span></td>
-                            <td>Mark Smith</td>
+                            <td>Neily Ka</td>
                             <td>123-456-7890</td>
                         </tr> -->
-                    </tbody>
+                   
                 </table>
             </div>
         </div>
     </div>
     <!-- end of address book home -->
     
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-
-    <ul id="myUL">
-      <li><a href="#">Adele</a></li>
-      <li><a href="#">Agnes</a></li>
-    
-      <li><a href="#">Billy</a></li>
-      <li><a href="#">Bob</a></li>
-    
-      <li><a href="#">Calvin</a></li>
-      <li><a href="#">Christina</a></li>
-      <li><a href="#">Cindy</a></li>
-    </ul>
-
-    <div class = "modal-row grid-row"  id="myInput">
-        <div class = "modal-col" id="myUL" >
-            <label for="">First Name</label>
-            <input type = "text" placeholder="The first name" class = "form-control" name = "first_name">
-        </div>
-        <div class = "modal-col"  >
-            <label for="">Last Name</label>
-            <input type = "text" placeholder="The last name" class = "form-control" name = "last_name">
-        </div>
-    </div>
-
-
     <script src = "app.js"></script>
-
-
-    <script>
-        function myFunction() {
-            var input, filter, ul, li, a, i, txtValue;
-            input = document.getElementById("myInput");
-            filter = input.value.toUpperCase();
-            ul = document.getElementById("myUL");
-            li = ul.getElementsByTagName("li");
-            for (i = 0; i < li.length; i++) {
-                a = li[i].getElementsByTagName("a")[0];
-                txtValue = a.textContent || a.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
-                } else {
-                    li[i].style.display = "none";
-                }
-            }
-        }
-
-
-        // function myFunction() {
-        //     var input, filter, ul, li, a, i, txtValue;
-        //     input = document.getElementById("myInput");
-        //     filter = input.value.toUpperCase();
-        //     ul = document.getElementById("myUL");
-        //     li = ul.getElementsByTagName("li");
-        //     for (i = 0; i < li.length; i++) {
-        //         a = li[i].getElementsByTagName("a")[0];
-        //         txtValue = a.textContent || a.innerText;
-        //         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        //             li[i].style.display = "";
-        //         } else {
-        //             li[i].style.display = "none";
-        //         }
-        //     }
-        // }
-        </script>
 </body>
 </html>

@@ -101,6 +101,10 @@ button{
 
 
 /* right*/
+.buttonSearch{
+    
+    background-color: #fa8e3f;
+}
 .upper-btn-box .right-box{
     height: 100%;
     margin-left: 400px;
